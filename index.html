@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Password generator</title>
+</head>
+<body>
+  <main class="main">
+    <div class="container">
+      <div class="password-card">
+        <h2 class="password-title">Generate password</h2>
+        <input type="text" readonly class="password-input">
+        <div class="password-checkboxes">
+          <input class="password-checkbox" type="checkbox" id="symbols">
+          <label class="password-label" for="symbols" selected>Symbols</label>
+          <input class="password-checkbox" type="checkbox" id="uppercase">
+          <label class="password-label" for="uppercase">Uppercase</label>
+          <input class="password-checkbox" type="checkbox" id="lowercase">
+          <label class="password-label" for="lowercase">Lowercase</label>
+          <input class="password-checkbox" type="checkbox" id="numbers">
+          <label class="password-label" for="numbers">Numbers</label>
+        </div>
+        <!-- /.password-checkboxes -->
+        <label for="range" class="password-label">Change amount of characters:</label>
+        <input type="range" id="range" min="5" max="15" value="10" step="1" class="password-range">
+        <span class="password-amount">Password length: <br> <b>10</b></span>
+        <button class="button">Generate password</button>
+      </div>
+      <!-- /.password-card -->
+    </div>
+    <!-- /.container -->
+  </main>
+  <!-- /.main -->
+
+  <!-- === JavaScript === -->
+  <script type="module" src="js/constants.js"></script>
+  <script type="module" src="js/util.js"></script>
+  <script type="module" src="js/handlers.js"></script>
+  <script type="module" src="js/main.js"></script>
+  <!-- === /JavaScript === -->
+</body>
+</html>
